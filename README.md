@@ -1,6 +1,6 @@
 # VGuard Model
 
-This repository contains a machine learning model that achieves 98% accuracy. The following screenshots demonstrate the model's performance and training results from Google Colab.
+This repository contains a machine learning model that achieves 92% accuracy. The following screenshots demonstrate the model's performance and training results from Google Colab.
 
 ## Model Performance Screenshots
 
@@ -22,6 +22,6 @@ This repository contains a machine learning model that achieves 98% accuracy. Th
 
 ## Key Achievements
 
-- **98% Model Accuracy**: The model demonstrates high performance with 98% accuracy
+- **92% Model Accuracy**: The model demonstrates high performance with 92% accuracy
 - **Google Colab Implementation**: All training and evaluation conducted in Google Colab environment
 - **Comprehensive Results**: Multiple screenshots showcase different aspects of model performance and metrics

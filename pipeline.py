@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """
 Paddy Disease Classification using EfficientNetB4
-Author: Mehak Iftikhar
-Email: mehakkhan301007@gmail.com
 
 This project implements a CNN-based model using transfer learning with EfficientNetB4
 to classify paddy diseases from images with 98% accuracy.

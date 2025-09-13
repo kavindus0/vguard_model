@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  vguard-model:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vguard-model:latest
+    container_name: vguard-model-app
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Mount data directory for datasets
+      - ./data:/app/data
+      # Mount models directory for saved models
+      - ./models:/app/models
+      # Mount logs directory
+      - ./logs:/app/logs
+    working_dir: /app
+    # Override default command for interactive development
+    # command: tail -f /dev/null
+    restart: unless-stopped
+    
+  # Optional: Add Jupyter notebook service for development
+  notebook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vguard-model:latest
+    container_name: vguard-model-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./notebooks:/app/notebooks
+      - .:/app/workspace
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+    restart: unless-stopped
+    profiles:
+      - dev

@@ -14,30 +14,6 @@ docker build -t vguard-model .
 docker run --rm vguard-model
 ```
 
-### Development Environment
-```bash
-# Start development environment
-./scripts/dev-setup.sh up
-
-# Start with Jupyter notebook
-./scripts/dev-setup.sh notebook
-
-# View logs
-./scripts/dev-setup.sh logs
-
-# Stop environment
-./scripts/dev-setup.sh down
-```
-
-### Using Docker Compose
-```bash
-# Build and run the main application
-docker-compose up
-
-# Run with Jupyter notebook for development
-docker-compose --profile dev up
-```
-
 ## 🔄 CI/CD Pipeline
 
 The repository includes a comprehensive GitHub Actions workflow that:
@@ -59,27 +35,12 @@ ghcr.io/kavindus0/vguard_model:latest
 docker run --rm ghcr.io/kavindus0/vguard_model:latest
 ```
 
-## 📋 Requirements
-
-- Python 3.11+
-- TensorFlow 2.12+
-- Docker (for containerized deployment)
-- Kaggle API credentials (for dataset access)
 
 ## 📚 Documentation
 
 - [CI/CD Docker Pipeline Documentation](docs/CI-CD-DOCKER.md) - Comprehensive guide to the containerized deployment pipeline
 
 ## 🏗️ Local Development
-
-### Without Docker
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the pipeline
-python pipeline.py
-```
 
 ### With Docker
 ```bash

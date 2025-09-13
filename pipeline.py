@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-"""
-Paddy Disease Classification using EfficientNetB4
 
-This project implements a CNN-based model using transfer learning with EfficientNetB4
-to classify paddy diseases from images with 98% accuracy.
-"""
 
 import pandas as pd
 import plotly.express as px
@@ -47,11 +41,9 @@ def setup_kaggle():
         import kagglehub
         kagglehub.login()
         
-        # Download paddy disease classification dataset
         paddy_disease_path = kagglehub.competition_download('paddy-disease-classification')
         print(f"Dataset downloaded to: {paddy_disease_path}")
         
-        # Move files to current directory
         os.system(f"mv -f {paddy_disease_path}/* .")
         print('Data source import complete.')
         
@@ -169,7 +161,7 @@ def load_datasets():
 
 def build_model():
     """Build the EfficientNetB4 transfer learning model"""
-    # Load pre-trained EfficientNetB4 model
+ 
     efficientnet_base = EfficientNetB4(
         weights='imagenet', 
         include_top=False, 

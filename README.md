@@ -66,6 +66,10 @@ docker run --rm ghcr.io/kavindus0/vguard_model:latest
 - Docker (for containerized deployment)
 - Kaggle API credentials (for dataset access)
 
+## 📚 Documentation
+
+- [CI/CD Docker Pipeline Documentation](docs/CI-CD-DOCKER.md) - Comprehensive guide to the containerized deployment pipeline
+
 ## 🏗️ Local Development
 
 ### Without Docker
